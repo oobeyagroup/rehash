@@ -1,4 +1,6 @@
 Rehash::Application.routes.draw do
+  resources :tweetstores
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

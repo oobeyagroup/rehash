@@ -1,0 +1,31 @@
+<h1>Listing tweetstores</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Screen name</th>
+    <th>Text</th>
+    <th>Profile image url</th>
+    <th>Tweeted at</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @tweetstores.each do |tweetstore| %>
+  <tr>
+    <td><%= tweetstore.name %></td>
+    <td><%= tweetstore.screen_name %></td>
+    <td><%= tweetstore.text %></td>
+    <td><%= tweetstore.profile_image_url %></td>
+    <td><%= tweetstore.tweeted_at %></td>
+    <td><%= link_to 'Show', tweetstore %></td>
+    <td><%= link_to 'Edit', edit_tweetstore_path(tweetstore) %></td>
+    <td><%= link_to 'Destroy', tweetstore, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Tweetstore', new_tweetstore_path %>

@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @tweetstore.name %>
+</p>
+
+<p>
+  <b>Screen name:</b>
+  <%= @tweetstore.screen_name %>
+</p>
+
+<p>
+  <b>Text:</b>
+  <%= @tweetstore.text %>
+</p>
+
+<p>
+  <b>Profile image url:</b>
+  <%= @tweetstore.profile_image_url %>
+</p>
+
+<p>
+  <b>Tweeted at:</b>
+  <%= @tweetstore.tweeted_at %>
+</p>
+
+
+<%= link_to 'Edit', edit_tweetstore_path(@tweetstore) %> |
+<%= link_to 'Back', tweetstores_path %>

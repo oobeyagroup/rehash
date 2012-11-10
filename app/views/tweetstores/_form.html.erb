@@ -1,0 +1,37 @@
+<%= form_for(@tweetstore) do |f| %>
+  <% if @tweetstore.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@tweetstore.errors.count, "error") %> prohibited this tweetstore from being saved:</h2>
+
+      <ul>
+      <% @tweetstore.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :screen_name %><br />
+    <%= f.text_field :screen_name %>
+  </div>
+  <div class="field">
+    <%= f.label :text %><br />
+    <%= f.text_field :text %>
+  </div>
+  <div class="field">
+    <%= f.label :profile_image_url %><br />
+    <%= f.text_field :profile_image_url %>
+  </div>
+  <div class="field">
+    <%= f.label :tweeted_at %><br />
+    <%= f.datetime_select :tweeted_at %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,6 +1,9 @@
 class WelcomeController < ApplicationController
   
   def index
-  end
+    
+      @this_tweet = Tweetstore.first
+    end
+
   
 end

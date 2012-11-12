@@ -1,8 +1,8 @@
 class WelcomeController < ApplicationController
   
   def index
-    
-      @this_tweet = Tweetstore.first
+    # get first three items from the tweet database
+      @tweets = Tweetstore.all
     end
 
   

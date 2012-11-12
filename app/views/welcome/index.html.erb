@@ -12,13 +12,10 @@
 
 		<div class="twitterfeed">
 			<h2 class="tweets">3 new tweets</h2> 
-				<blockquote class="twitter-tweet"><p><img src="<%= @this_tweet.profile_image_url%>"alt="tweetpic"><%= @this_tweet.text%></p>&mdash; <%= @this_tweet.screen_name%>  data-datetime=<%= @this_tweet.tweeted_at.to_s %> ></a></blockquote>
-		
+			<% (0..2).each do |i| %>
+				<blockquote class="twitter-tweet"><p><img src="<%= @tweets[i].profile_image_url%>"alt="tweetpic"><%= @tweets[i].text%></p>&mdash; <%= @tweets[i].screen_name%>  data-datetime=<%= @tweets[i].tweeted_at.to_s %> ></a></blockquote>
+		<% end %>
 			
-			
-			<blockquote class="twitter-tweet"><p><img src="https://twimg0-a.akamaihd.net/profile_images/2663348193/d56f10649a5d54b42c9d0f9d81d63e23_normal.png" alt="tweetpic">Alinea New Years Eve and January tickets now on sale. <a href="https://www.alinearestaurant.com/user/login">alinearestaurant.com/user/login</a> <a href="https://twimg0-a.akamaihd.net/profile_images/2663348193/d56f10649a5d54b42c9d0f9d81d63e23_normal.png" data-datetime="2011-11-07T20:21:07+00:00">November 7, 2011</a></blockquote>
-
-			<blockquote class="twitter-tweet"><p><img src="https://twimg0-a.akamaihd.net/profile_images/2284174872/7df3h38zabcvjylnyfe3_normal.png" alt="tweetpic">Search API will now always return "real" Twitter user IDs. The with_twitter_user_id parameter is no longer necessary. An era has ended. ^TS</p>&mdash; Twitter API (@twitterapi) <a href="https://twimg0-a.akamaihd.net/profile_images/2663348193/d56f10649a5d54b42c9d0f9d81d63e23_normal.png" data-datetime="2011-11-07T20:21:07+00:00">November 7, 2011</a></blockquote>
 		</div>
 
 		<!-- start dashboard here -->

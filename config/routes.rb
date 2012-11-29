@@ -8,4 +8,6 @@ Rehash::Application.routes.draw do
 
   resources :tweetstores
 
+  match 'auth/twitter/callback', to: 'sessions#create'
+
 end

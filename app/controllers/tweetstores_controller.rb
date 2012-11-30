@@ -1,11 +1,67 @@
+require 'rubygems'
+require 'tweetstream'
+
+def start_stream
+
+  TweetStream.configure do |config|
+    # this combination works
+    config.consumer_key       = '2ZlLFJN0JDIvSwVG3hWw'  
+    config.consumer_secret    = 'oZsLqN9TQc1IERxGRMieRLmk6U5liqUQe9yVa863BLw'
+    config.oauth_token        = '23986022-9SfbGAvrKTvyCGxD6M28kA4vRLXlAMClBVerpPcYI'
+    config.oauth_token_secret = 'WFefjLwdcLqejcmFhYFXiBYOUzEihgLMS5HpVsm33w'
+
+
+    # 
+    # config.consumer_key       = '5nXwpUUV7nZnhPYUnE5YA'
+    # config.consumer_secret    = '8BQWOjhP9wNDsLhMRxtAobI31InkjtreGwj564s'
+    # 
+    # config.oauth_token        = 'kp6Zh4A7ARhNepskbtCf5jqzEt1FZOUZFmlrHvhX8Wc'
+    # config.oauth_token_secret = 'dMwJZwRjmfCODcxCC5gFAAfAhXFV22Q49ulGCCaos'
+    # 
+
+    # config.oauth_token        = session[:oauth_token]
+    # config.oauth_token_secret = session[:oauth_verifier]
+
+    config.auth_method        = :oauth
+  end
+
+
+  count = 0
+  Tweetstore.destroy_all
+  
+  
+  # TweetStream::Client.new.track('obama') do |status|  
+
+  # client = TweetStream::Client.new
+  # 
+  # client.sitestream([session[:uid]], :followings => true) do |status|
+
+
+  TweetStream::Client.new().sample do |status|
+    
+      count += 1
+      puts count
+      Tweetstore.create  :name => status.user.name,
+                      :screen_name => status.user.screen_name,
+                      :text => status.text,
+                      :tweeted_at => status.created_at,
+                      :profile_image_url =>  status.user.profile_image_url
+      if count > 5
+        break
+    end
+  end
+end 
+
+
 class TweetstoresController < ApplicationController
   # GET /tweetstores
   # GET /tweetstores.json
   def index
+    start_stream
     @tweetstores = Tweetstore.all
-
+    
     respond_to do |format|
-      format.html # index.html.erb
+      format.html { redirect_to dashboard_url } # index.html.erb
       format.json { render json: @tweetstores }
     end
   end

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121129201828) do
+ActiveRecord::Schema.define(:version => 20121201175030) do
 
   create_table "tweetstores", :force => true do |t|
     t.string   "name"
@@ -30,6 +30,8 @@ ActiveRecord::Schema.define(:version => 20121129201828) do
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
     t.string   "nickname"
+    t.string   "token"
+    t.string   "secret"
   end
 
 end

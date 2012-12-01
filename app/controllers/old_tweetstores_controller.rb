@@ -4,57 +4,31 @@ require 'tweetstream'
 def start_stream
 
   TweetStream.configure do |config|
+    # this combination works, these values are in initializers/omniauth.rb
     config.consumer_key       = '5nXwpUUV7nZnhPYUnE5YA'  
     config.consumer_secret    = '8BQWOjhP9wNDsLhMRxtAobI31InkjtreGwj564s'
 
-    # this works
     config.oauth_token        = User.first.token
-    config.oauth_token_secret = User.first.secret   # shhhhhhhh
+    config.oauth_token_secret =  User.first.secret
+    puts "---------"
+    puts config.oauth_token
+    puts config.oauth_token_secret
+    puts "---------"
 
     config.auth_method        = :oauth
   end
 
+  # @client = Twitter::Client.new(
+  #   :oauth_token => User.first.token
+  #   :oauth_token_secret => User.first.secret
+  # )
+puts "*********"
+puts config.oauth_token
+puts config.oauth_token_secret
+puts "*********"
+
   count = 0
-  
-  puts "Listening    #{Time.now}"
-
-  client = TweetStream::Client.new
-
-  client.on_error do |message|
-    puts "Error: #{Time.now}"
-    puts message
-  end
-
-  client.on_direct_message do |direct_message|
-    puts Time.now
-    puts "@#{direct_message.sender.screen_name} sent a direct message"
-    puts direct_message.text
-  end
-
-  client.on_timeline_status do |status|
-    puts Time.now
-    puts "@#{status.user.screen_name} said"
-    puts status.text
-    Tweetstore.create  :name => status.user.name,
-                       :screen_name => status.user.screen_name,
-                       :text => status.text,
-                       :tweeted_at => status.created_at,
-                       :profile_image_url =>  status.user.profile_image_url
-    count += 1
-    if count > 2
-      puts "BBBBOOOOOOOOOOOOOOOOOOMMMMMMMMMMMMMMMM!"
-      render 'dashboard_url'
-      count = 0
-    end
-  end
-
-puts "going into userstream"
-  client.userstream
-puts "back from userstream"
-  
-end 
-  
-  # Tweetstore.destroy_all
+  Tweetstore.destroy_all
   
   
   # TweetStream::Client.new.track('obama') do |status|  
@@ -63,25 +37,25 @@ end
   # 
   # client.sitestream([session[:uid]], :followings => true) do |status|
 
- #  if config.oauth_token && config.oauth_token_secret
- #     TweetStream::Client.new().sample do |status|
- #     
- #       count += 1
- #       puts count
- #       Tweetstore.create  :name => status.user.name,
- #                       :screen_name => status.user.screen_name,
- #                       :text => status.text,
- #                       :tweeted_at => status.created_at,
- #                       :profile_image_url =>  status.user.profile_image_url
- #       if count > 5
- #         break
- #       end
- #     end
- #   else
- #     puts "No token or secret"
- #   end  
- # end 
- 
+  if config.oauth_token && config.oauth_token_secret
+    TweetStream::Client.new().sample do |status|
+    
+      count += 1
+      puts count
+      Tweetstore.create  :name => status.user.name,
+                      :screen_name => status.user.screen_name,
+                      :text => status.text,
+                      :tweeted_at => status.created_at,
+                      :profile_image_url =>  status.user.profile_image_url
+      if count > 5
+        break
+      end
+    end
+  else
+    puts "No token or secret"
+  end  
+end 
+
 
 class TweetstoresController < ApplicationController
   # GET /tweetstores

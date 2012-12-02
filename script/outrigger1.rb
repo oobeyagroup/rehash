@@ -5,7 +5,7 @@ require 'tweetstream'
 ActiveRecord::Base.establish_connection ( 
   {:adapter => "sqlite3",
   :host => "localhost",
-  :username => "lowelllindstrom",
+  :username => "guestadmin",
   :password => "rehash",
   :database => "db/development.sqlite3" }
   )
@@ -17,7 +17,7 @@ class Tweetstore < ActiveRecord::Base
 end
 
 
-puts Tweetstore.all
+puts "Currently " + Tweetstore.count.to_s + " tweet(s) being stored"
 
 TweetStream.configure do |config|
   config.consumer_key       = '5nXwpUUV7nZnhPYUnE5YA'  

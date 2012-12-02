@@ -42,8 +42,7 @@ def start_stream
                        :profile_image_url =>  status.user.profile_image_url
     count += 1
     if count > 2
-      puts "BBBBOOOOOOOOOOOOOOOOOOMMMMMMMMMMMMMMMM!"
-      render 'dashboard_url'
+      render '/welcome/dashboard_url'
       count = 0
     end
   end

@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  recording_id: 1
+  item: MyString
+
+two:
+  recording_id: 1
+  item: MyString

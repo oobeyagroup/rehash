@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121206182800) do
+ActiveRecord::Schema.define(:version => 20121206193628) do
 
   create_table "recordings", :force => true do |t|
     t.string   "name"
@@ -19,9 +19,15 @@ ActiveRecord::Schema.define(:version => 20121206182800) do
     t.datetime "duration"
     t.string   "criteria"
     t.string   "uid"
-    t.text     "rehash"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+  end
+
+  create_table "tweets", :force => true do |t|
+    t.integer  "recording_id"
+    t.string   "item"
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
   end
 
   create_table "tweetstores", :force => true do |t|

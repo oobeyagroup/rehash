@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8"/>
+		<title>Rehash</title>
+		<link href="http://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+
+<!-- beginning of jquery -->
+		<link rel="stylesheet" 
+		href="http://code.jquery.com/ui/1.9.2/themes/base/jquery-ui.css" />
+		<link rel="stylesheet" href="css/rehash-02.css"/>
+	</head>
+
+	<body>	
+	<div class="container">
+		
+		<header>
+			<a href="#" class="rehash-logo"><img src="images/logo-small.png"/></a>
+			<p>Dian Clark @MiddlingTrifle</p>
+			<a href="#" class="log-out">Log out</a>
+		</header>
+
+	<section class="dashboard-container">
+		<h1>Use hashtags or user names to capture tweet streams. View them later.</h1>
+		<form class="dashboard-left">
+		
+
+<!-- SPECIFY WHAT TO RECORD -->
+
+		<fieldset class="specify">
+			<%= image_tag "birdwebtrans.png", :class => "twitterbird" %>
+				<p>Start by telling us what to record: favorites, friends, events. Or simply add your handle to record your own stream</p>
+		    <input type="text" name="login_username" id="specifyfield" placeholder="Enter @users and or #hashtags">
+		</fieldset>
+		
+<!-- SET SCHEDULE -->
+
+
+		<fieldset class="datetime">
+			<p>Select date and time to record stream <span class="reset">Reset</span></p>
+			<p>Date <input type="text" id="datepicker" /></p>
+			<p>Time <input type="text" id="timepicker"/></p>
+		</fieldset>
+
+		<fieldset class="duration">
+			<p>How long do you want to record this session?</p>
+				<div class="button-holder">
+					<input type="radio" id="radio-1" name="radio-set" class="regular-radio big-radio" checked /><label for="radio-1"><p>1 Hr</p></label>
+					<input type="radio" id="radio-2" name="radio-set" class="regular-radio big-radio" /><label for="radio-2"><p>3 Hr</p></label>
+					<input type="radio" id="radio-3" name="radio-set" class="regular-radio big-radio" /><label for="radio-3"><p>12 Hr</p></label>
+					<input type="radio" id="radio-4" name="radio-set" class="regular-radio big-radio" /><label for="radio-4"><p>24 Hr</p></label>
+					<select name="other">
+						<option value="custom">Other</option>
+						<option value="2hr">2hr</option>
+						<option value="4hr">4hr</option>
+						<option value="5hr">5hr</option>
+						<option value="6hr">6hr</option>
+						<option value="7hr">7hr</option>
+						<option value="8hr">8hr</option>
+						<option value="9hr">9hr</option>
+						<option value="10hr">10hr</option>
+						<option value="11hr">11hr</option>
+					</select>
+				</div>			
+		</fieldset>
+
+		<fieldset class="sessionname">Session Name<input type="text" id="setsessionname">
+		</fieldset>
+
+		<fieldset class="submit"><input type="submit" name="submit" value="Submit Form">
+		</fieldset>		
+
+		</form>
+	</section>	
+
+	<aside class="dashboard-right">
+		<div class="streams">
+
+			<h3>Recordings</h3>
+
+			<!-- Yes Active Recording -->
+			<%= image_tag "on.gif", :class => "indicator" %><h4>Current</h4>
+			<ul class="stream-text" >
+				<li>Dec-04-2012_02:00p</li><!-- <p>Stop</p> -->
+				<li>Dec-04-2012_ArtBasel</li><!-- <p>Stop</p> -->
+			</ul>
+			<!-- End Yes Active Recording -->
+
+
+			<!-- No Active Recording -->
+			<%= image_tag "off.gif", :class => "indicator" %><h4>Current</h4>
+			<ul class="stream-text" >
+				<li>No active recordings</li>
+			</ul>
+			<!-- End No Active Recording -->
+
+	       	<h4>Scheduled</h4>
+			<ul>
+				<li>Dec-05-2012_08:00p Modern Family</li>
+				<li>Bears vs. Seahawks</li>
+				<li>Nov-15-2012_8p Glee #Glee @Glee</li>
+			</ul>
+	        <h4>Saved</h4>
+	        <ul>
+				<li>Nov-30-2012_02:22p @DianClark</li>
+				<li>#Obama #Flotus</li>
+	        </ul>	
+
+			<div class="view-all">
+				<p>View All</p>
+			</div> 
+		</div>
+
+		<div class="recommended">
+			<h3>Recommended for You</h3>
+			<ul class="stream-text" >
+				<%= image_tag "sm-avatar-clooney.png", :class => "sm-avatar" %><li>@GeorgeClooney</li>
+				<%= image_tag "sm-avatar-bears.png", :class => "sm-avatar" %><li>@ChicagoBears</li>
+			</ul>
+		</div>
+	</aside>		
+
+<!-- minidash end DDE -->
+
+	<footer>
+		<ul class="footerlinks">
+			<li><a href="#">My Account</a></li>
+			<li><a href="#">About</a></li>
+			<li><a href="#">Help</a></li>
+			<li><a href="#">Contact</a></li>
+			<li><a href="#">Privacy</a></li>
+		</ul>
+	</footer>	
+
+	</div>	
+	<!-- container end	 -->
+    
+	    <script src="http://code.jquery.com/jquery-1.8.3.js"></script>
+	    
+	    <script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
+
+	    <script src="js/myrehash.js"></script>
+	</body>
+	
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

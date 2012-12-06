@@ -4,7 +4,8 @@ Rehash::Application.routes.draw do
 
   root :to => 'welcome#login'
 
-  get '/index' => 'welcome#index', :as => 'dashboard'
+  get '/index' => 'welcome#dashboard', :as => 'index'
+  get '/oldindex' => 'welcome#index', :as => 'oldindex'
 
   resources :tweetstores
 

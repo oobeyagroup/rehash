@@ -1,12 +1,13 @@
 require 'rubygems'
 require "active_record"
 require 'tweetstream'
+require 'sqlite3'
 
 ActiveRecord::Base.establish_connection ( 
-  {:adapter => "sqlite3",
+{ :adapter => "sqlite3",
   :host => "localhost",
-  :username => "guestadmin",
-  :password => "rehash",
+  :username => "Tom Dahlman",
+  :password => "GirMir",
   :database => "db/development.sqlite3" }
   )
 ActiveRecord::Base.logger = Logger.new(STDERR)
@@ -16,22 +17,27 @@ class Tweetstore < ActiveRecord::Base
   attr_accessible :name, :profile_image_url, :screen_name, :text, :tweeted_at
 end
 
+class User < ActiveRecord::Base
+  attr_accessible :name, :provider, :uid, :nickname, :token, :secret
+end
 
-puts "Currently " + Tweetstore.count.to_s + " tweet(s) being stored"
+puts Tweetstore.count
 
 TweetStream.configure do |config|
   config.consumer_key       = '5nXwpUUV7nZnhPYUnE5YA'  
   config.consumer_secret    = '8BQWOjhP9wNDsLhMRxtAobI31InkjtreGwj564s'
   
   # this works
-  config.oauth_token        = '23986022-D3SsBwiyDCY17XQ7twwPZQLnOPtvSONWcW8Ah4tSM'
-  config.oauth_token_secret = 'CqsH6OEngftmQiHYtw6OmQSlFM9ch1jGUUTr2pUo'
+  config.oauth_token        = User.first.token
+  config.oauth_token_secret = User.first.secret
     
   config.auth_method        = :oauth
 end
 
-
-
+puts  Tweetstore.count
+puts " -- "
+puts User.count
+puts " ---- "
 puts "Listening    #{Time.now}"
 
 

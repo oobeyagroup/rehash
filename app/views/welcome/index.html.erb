@@ -12,7 +12,7 @@
 
 		<div class="twitterfeed">
 			<h2 class="tweets">3 new tweets</h2> 
-			<% if Tweetstore.count > 0 %>
+			<% if Tweetstore.count > 2 %>
 				<% (0..2).each do |i| %>
 				<blockquote class="twitter-tweet"><p><img src="<%= @tweets[i].profile_image_url%>"alt="tweetpic"><%= @tweets[i].text%></p>&mdash; <%= @tweets[i].screen_name%>  data-datetime=<%= @tweets[i].tweeted_at.to_s %> ></a></blockquote>
 				<% end %>

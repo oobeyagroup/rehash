@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  start: 
+  duration: 2012-12-06 12:28:00
+  criteria: MyString
+  uid: MyString
+  rehash: MyText
+
+two:
+  name: MyString
+  start: 
+  duration: 2012-12-06 12:28:00
+  criteria: MyString
+  uid: MyString
+  rehash: MyText

@@ -1,6 +1,8 @@
 class User < ActiveRecord::Base
   attr_accessible :name, :provider, :uid, :nickname, :token, :secret
 
+  has_many :recordings
+  
   def self.from_omniauth(auth)
   	where(auth.slice("provider", "uid")).first || create_from_omniauth(auth)
   end

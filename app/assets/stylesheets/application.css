@@ -10,8 +10,9 @@
  *
  *= require_self
  *= require reset
- *= require rehash-02
  *= require rehash
+ *= require rehash-02
+
 
 
  */

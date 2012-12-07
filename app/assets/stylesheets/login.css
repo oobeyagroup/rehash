@@ -1,0 +1,274 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+
+
+/* START USER STYLES HERE */
+
+body {
+	background-color: rgba(18,21,14,1);
+}
+
+#container {
+	max-width: 1024px;
+	max-height: 1020px;
+	margin: auto;
+}
+
+.header	{
+	width: 100%;
+	height: 50px;
+	background: #686868; /* Old browsers */
+	background: -moz-linear-gradient(top,  #686868 0%, #0e0e0e 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#686868), color-stop(100%,#0e0e0e)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #686868 0%,#0e0e0e 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #686868 0%,#0e0e0e 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #686868 0%,#0e0e0e 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #686868 0%,#0e0e0e 100%); /* W3C */
+	-webkit-box-shadow: 4px 3px 11px rgba(255, 255, 255, 0.25);
+	-moz-box-shadow:    4px 3px 11px rgba(255, 255, 255, 0.25);
+	box-shadow:         4px 3px 11px rgba(255, 255, 255, 0.25);
+}
+
+.logobug {
+	background: url(/assets/img-rehash-bug.png) center no-repeat;
+	float: left;
+	width: 30px;
+	height: 35px;
+	padding-left: 65px;
+	padding-top: 13px;
+}
+
+.language {
+	color: rgba(247,179,100,1);
+  	font-family: 'Helvetica Neue', Arial, sans-serif;
+	font-size: 15px;
+}
+
+.select-language {
+	color: rgba(247,179,100,1);
+	height: 30px;
+	width: 230px;
+	float: right;
+}
+
+#choose {
+	color: rgba(247,179,100,1);
+  	font-family: 'Helvetica Neue', Arial, sans-serif;
+	background-color: #333;
+	font-size: 15px;
+	width: 110px;
+	height: 24px;
+	margin: 11px 30px 0 10px;
+}
+
+.content-wrapper {
+	background: url(/assets/img-bkgd.jpg) left center no-repeat;
+	background-size: cover;
+	margin: auto;
+}
+
+.content-wrapper:before, 
+.content-wrapper:after {
+	content:"";
+	display:table;
+}
+
+.content-wrapper:after {
+	clear:both;
+}
+
+.banner {
+	width: auto;
+	padding-left: 5%;
+	padding-right: 5%;
+	padding-top: 23%;
+}
+
+/*.rehashlogo {
+	filter: drop-shadow(9px 9px 9px rgba(0,0,0,0.3));
+	filter: url(shadow.svg#drop-shadow);
+	margin: auto;
+}*/
+
+.rehash-tag {
+  	font-family: Montserrat, Helvetica, Arial, sans-serif;
+	font-size: 40px;
+	padding-top: 10px;
+	color: #fff;	
+}
+
+
+/*Login Form Start */
+
+.loginall {
+	/*background: red;*/
+	font-family: 'Helvetica Neue', arial, sans-serif;
+	font-weight: lighter;
+	font-size: 17px;
+	color: #808285;
+	height: 210px;
+	width: 350px;
+	float: right;
+	margin-right: 7%;
+	margin-top: 10%;
+	margin-bottom: 10%;
+}
+
+.formuser {
+	background: #fff;
+	height: 140px;
+	width: 350px;
+}
+.username-container {
+	background: #dcddde;
+	margin: 15px 0 0 15px;
+	padding: 0 0 0 0;
+	float: left;
+}
+
+#login_username {
+	background: #dcddde;
+	border: none;
+	font-family: 'Helvetica Neue', arial, sans-serif;
+	font-size: 17px;
+	font-weight: lighter;
+	margin: 0;
+	padding: 7px 7px 7px 3px;
+	width: 280px;
+}
+
+/*password */
+.password-container {
+	background: #dcddde;
+	margin-left: 15px;
+	margin-top: 11px;
+	float: left;
+}
+
+#login_password {
+	background: #dcddde;
+	font-family: 'Helvetica Neue', arial, sans-serif;
+	font-size: 17px;
+	font-weight: lighter;
+	padding: 7px 7px 7px 3px;
+	margin: 0;
+	width: 184px;
+	border: none;
+}
+/*REMEMBER FORGET*/
+
+.rememberforget {
+	float: left;
+	padding: 13px 0 0 14px;
+	font-size: 17px;
+}
+input[type="checkbox"] {
+	margin: 4px 7px 0 0;
+	padding-right: 6px;
+}
+	
+.forgot_password {
+	color: #808285;
+	text-decoration: none;
+	padding: 0 0 0 48px;
+}
+
+.forgot_password:hover {
+	color: #28aae1;
+}		
+/*NEW TO TWITTER?*/
+
+.newtweeter {
+	background: #fff;
+	color: #000;
+	float: left;
+	height: 45px;
+	margin: 15px 0 0 0;
+	width: 350px;
+}
+
+.twitter_signup:link {
+	/*font-size: 14px;*/
+	color: #000;
+	text-decoration: none;
+	float: left;
+	font-size: 15px;
+	padding: 14px 0 0 18px;
+}
+.twitter_signup:visited {
+/*font-size: 14px;*/
+	color: #808285;
+	/*text-decoration: none;*/
+}
+.twitter_signup:hover {
+/*font-size: 14px;*/
+	color: #28aae1;
+	/*text-decoration: none;*/
+}
+
+
+.formuser img {
+	/*margin: 15px 0 0 17px;*/
+	float: left;
+	padding-top:3px;
+}
+
+
+#login_submit {
+	background-color: #fa9a1b;
+    background-image: -webkit-linear-gradient(#fac689, #f6921e);
+    background-image:    -moz-linear-gradient(#fac689, #f6921e); 
+    background-image:     -ms-linear-gradient(#fac689, #f6921e); 
+    background-image:      -o-linear-gradient(#fac689, #f6921e); 
+    background-image:         linear-gradient(#fac689, #f6921e);
+	-webkit-box-shadow: inset 0 1px 0 #fada96, 0 1px 5px rgba(0,0,0,0.25);
+	-moz-box-shadow: inset 0 1px 0 #fada96, 0 1px 5px rgba(0,0,0,0.25);
+	-ms-box-shadow: inset 0 1px 0 #fada96, 0 1px 5px rgba(0,0,0,0.25);
+	-o-box-shadow: inset 0 1px 0 #fada96, 0 1px 5px rgba(0,0,0,0.25);  
+	box-shadow: inset 0 1px 0 #fada96, 0 1px 5px rgba(0,0,0,0.25); 
+	border: 0 ;
+	color: #000;
+	float: right;
+	font-family: helvetica, arial, sans-serif;
+	font-size: 17px;
+	margin: 11px 17px 0 0;
+	padding: 6px 15px;
+	text-decoration: none;
+}
+#login_submit {
+	-webkit-box-shadow: 0 2px 3px rgba(0,0,0,0.4);
+	-moz-box-shadow: 0 2px 3px rgba(0,0,0,0.4);
+	-ms-box-shadow: 0 2px 3px rgba(0,0,0,0.4);
+	-0-box-shadow: 0 2px 3px rgba(0,0,0,0.4);
+	box-shadow: 0 2px 3px rgba(0,0,0,0.4);
+}
+#login_submit:hover {
+	-webkit-box-shadow: 0 2px 3px rgba(0,0,0,0.4);
+	-moz-box-shadow: 0 2px 3px rgba(0,0,0,0.4);
+	-ms-box-shadow: 0 2px 3px rgba(0,0,0,0.4);
+	-0-box-shadow: 0 2px 3px rgba(0,0,0,0.4);
+	box-shadow: 0 2px 3px rgba(0,0,0,0.4);
+}
+
+#login_submit:active {
+	position:relative;
+	top:1px;
+	-webkit-box-shadow: 1px 0px 2px 0px rgba(0,0,0,0.5);
+	-moz-box-shadow: 1px 0px 2px 0px rgba(0,0,0,0.5);
+	-ms-box-shadow: 1px 0px 2px 0px rgba(0,0,0,0.5);
+	-o-box-shadow: 1px 0px 2px 0px rgba(0,0,0,0.5);
+	box-shadow: 1px 0px 2px 0px rgba(0,0,0,0.5);
+}
+
+
+/*Login Form End */
+
+
+@media all and (max-width: 400px) { 
+	.loginall {
+		float: none;
+		width: auto;
+	}

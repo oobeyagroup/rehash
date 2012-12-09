@@ -1,0 +1,67 @@
+<section class="dashboard-container">
+	<h1>Use hashtags or user names to capture tweet streams. View them later.</h1>
+	<div class="dashboard-left">
+	<%= form_for(@recording) do |f| %>
+		<% if @recording.errors.any? %>
+	    <div id="error_explanation">
+	      <h2><%= pluralize(@recording.errors.count, "error") %> prohibited this recording from being saved:</h2>
+		</div>
+		<% end %>
+
+		  <div class="specify">
+			<%= image_tag "birdwebtrans.png", :class => "twitterbird" %>
+			<p>Start by telling us what to record: favorites, friends, events. Or simply add your handle to record your own stream</p>
+
+		    <%= f.text_field :criteria, :id => 'specifyfield', :placeholder => 'Enter @users and or #hashtags' %>
+		  </div>
+				
+		<div class="datetime">
+			<p>Select date and time to record stream <span class="reset">Reset</span></p>
+			<%= f.datetime_select :start %>
+		</div>
+
+		<div class="duration">
+			<p>How long do you want to record this session?</p>
+			<div class="button-holder">
+				<%= f.radio_button :duration, "1", :class => "regular-radio big-radio"  %>
+				<%= label_tag :recording_duration_1, "1 Hr", :class => "radio_label" %>
+
+				<%= f.radio_button(:duration, "3", :class => "regular-radio big-radio" )%>
+				<%= label_tag :recording_duration_3, "3 Hr", :class => "radio_label" %>
+
+				<%= f.radio_button(:duration, "12", :class => "regular-radio big-radio" )%>
+				<%= label_tag :recording_duration_12, "12 Hr", :class => "radio_label" %>
+
+				<%= f.radio_button(:duration, "24", :class => "regular-radio big-radio" )%>
+				<%= label_tag :recording_duration_24, "24 Hr", :class => "radio_label" %>
+				
+				
+				<%= f.select :duration, [['2 Hr',2],['3 Hr',3],['4 Hr',4],['5 Hr',5],['6 Hr',6],['7 Hr',7],['8 Hr',8],['9 Hr',9],['10 Hr',10],['11 Hr',11]]%>
+				
+					<!-- <select name="other">
+						<option value="custom">Other</option>
+						<option value="2hr">2hr</option>
+						<option value="4hr">4hr</option>
+						<option value="5hr">5hr</option>
+						<option value="6hr">6hr</option>
+						<option value="7hr">7hr</option>
+						<option value="8hr">8hr</option>
+						<option value="9hr">9hr</option>
+						<option value="10hr">10hr</option>
+						<option value="11hr">11hr</option>
+					</select> -->
+			</div>
+		</div>
+
+		  <div class="sessionname">
+		  <%= f.label :name, "Session Name" %>
+		  <%= f.text_field :name, :id => 'setsessionname', :placeholder => 'Enter session name' %>
+		  </div>
+
+		  <div class="submit">
+		    <%= f.submit %>
+		  </div>
+	<% end %>
+	</div>
+
+<section>

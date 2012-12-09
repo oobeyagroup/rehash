@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8"/>
+		<title>Rehash</title>
+		<link href="http://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+
+<!-- beginning of jquery -->
+		<link rel="stylesheet" 
+		href="http://code.jquery.com/ui/1.9.2/themes/base/jquery-ui.css" />
+	</head>
+
+	<body>	
+	<div class="container">
+		
+		<header>
+			<%= link_to image_tag("logo-small.png"), "#", :class => "rehash-logo" %>
+			
+			<p>Dian Clark @MiddlingTrifle</p>
+			<a href="#" class="log-out">Log out</a>
+		</header>
+
+	<%= render :partial => 'recording_form' %>
+
+	<%= render :partial => 'recording_schedule' %>
+
+	<%= render :partial => 'footer' %>
+
+	</div>	
+	<!-- container end	 -->
+    
+	    <script src="http://code.jquery.com/jquery-1.8.3.js"></script>
+	    
+	    <script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
+
+	    <script src="/assets/myrehash.js"></script>
+	</body>
+	
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

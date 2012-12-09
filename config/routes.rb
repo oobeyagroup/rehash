@@ -2,10 +2,12 @@ Rehash::Application.routes.draw do
 
   resources :users
 
-  root :to => 'welcome#login'
+  root :to => 'recordings#login'
 
-  get '/index' => 'welcome#dashboard', :as => 'index'
-  get '/oldindex' => 'welcome#index', :as => 'oldindex'
+  get '/dashboard' => 'recordings#dashboard', :as => 'dashboard'
+  post '/dashboard' => 'recordings#create', :as => 'recordings'
+  get '/recordings' => 'recordings#index', :as => 'recording'
+  get '/oldindex' => 'recordings#index', :as => 'oldindex'
 
   resources :tweetstores
 

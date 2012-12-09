@@ -16,7 +16,7 @@ ActiveRecord::Schema.define(:version => 20121206193628) do
   create_table "recordings", :force => true do |t|
     t.string   "name"
     t.datetime "start"
-    t.datetime "duration"
+    t.integer  "duration"
     t.string   "criteria"
     t.string   "uid"
     t.datetime "created_at", :null => false

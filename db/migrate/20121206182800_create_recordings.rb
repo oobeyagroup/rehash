@@ -3,7 +3,7 @@ class CreateRecordings < ActiveRecord::Migration
     create_table :recordings do |t|
       t.string :name
       t.datetime :start
-      t.datetime :duration
+      t.integer :duration
       t.string :criteria
       t.string :uid
       t.text :rehash

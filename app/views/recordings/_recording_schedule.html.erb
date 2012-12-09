@@ -1,0 +1,48 @@
+<aside class="dashboard-right">
+	<div class="streams">
+
+		<h3>Recordings</h3>
+
+<!-- For now, randomly display whether there is a current recording or not -->
+		<% if (rand(2) == 1) %>  
+
+			<%= image_tag "on.gif", :class => "indicator" %><h4>Current</h4>
+			<ul class="stream-text" >
+				<li>Dec-04-2012_02:00p</li><!-- <p>Stop</p> -->
+				<li>Dec-04-2012_ArtBasel</li><!-- <p>Stop</p> -->
+			</ul>
+		
+		<% else %>
+
+			<%= image_tag "off.gif", :class => "indicator" %><h4>Current</h4>
+			<ul class="stream-text" >
+				<li>No active recordings</li>
+			</ul>
+		
+		<% end %>
+
+       	<h4>Scheduled</h4>
+		<ul>
+			<% @recordings.each do |recording| %>
+				<li><%= recording.criteria %></li>
+			<% end %>	
+		</ul>
+        <h4>Saved</h4>
+        <ul>
+			<li>Nov-30-2012_02:22p @DianClark</li>
+			<li>#Obama #Flotus</li>
+        </ul>	
+
+		<div class="view-all">
+			<p>View All</p>
+		</div> 
+	</div>
+
+	<div class="recommended">
+		<h3>Recommended for You</h3>
+		<ul class="stream-text" >
+			<%= image_tag "sm-avatar-clooney.png", :class => "sm-avatar" %><li>@GeorgeClooney</li>
+			<%= image_tag "sm-avatar-bears.png", :class => "sm-avatar" %><li>@ChicagoBears</li>
+		</ul>
+	</div>
+</aside>

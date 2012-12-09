@@ -9,6 +9,6 @@ class SessionsController < ApplicationController
 		session[:uid]
     	session[:oauth_token] = params[:oauth_token]
     	session[:oauth_verifier] = params[:oauth_verifier]
-		redirect_to '/index', notice: "Signed in!"
+		redirect_to '/dashboard', notice: "Signed in!"
 	end
 end

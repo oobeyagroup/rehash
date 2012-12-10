@@ -1,7 +1,7 @@
 class SessionsController < ApplicationController
 	def create
 		auth = request.env['omniauth.auth']
-    	puts auth.to_yaml
+    	# puts auth.to_yaml
 
 	 	user = User.find_by_provider_and_uid(auth["provider"],auth["uid"]) || User.create_from_omniauth(auth)
 		# User.from_omniauth(env["omniauth.auth"])
@@ -11,4 +11,11 @@ class SessionsController < ApplicationController
     	session[:oauth_verifier] = params[:oauth_verifier]
 		redirect_to '/dashboard', notice: "Signed in!"
 	end
+
+	def destroy
+		session[:user_id] = nil
+		puts session[:user_id]
+		redirect_to '/'
+	end
+
 end

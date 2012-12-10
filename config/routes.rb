@@ -12,5 +12,7 @@ Rehash::Application.routes.draw do
   resources :tweetstores
 
   match 'auth/twitter/callback', to: 'sessions#create'
-
+  match 'auth/failure', to: redirect('/')
+  match 'signout', to: 'sessions#destroy', as: 'signout'
+  
 end

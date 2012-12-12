@@ -10,7 +10,6 @@
  *
  *= require_self
  *= require reset
- *= require rehash
  *= require login
  *= require dashboard
 

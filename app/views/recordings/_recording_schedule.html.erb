@@ -24,7 +24,7 @@
        	<h4>Scheduled</h4>
 		<ul>
 			<% @recordings.each do |recording| %>
-				<li><%= recording.criteria %></li>
+				<li title="Duration: <%= recording.duration.to_s %> Hours, Criteria:<%= recording.criteria %>"><%= recording.name %>  </li>
 			<% end %>	
 		</ul>
         <h4>Saved</h4>

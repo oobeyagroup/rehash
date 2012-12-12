@@ -1,49 +1,4 @@
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
-}
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
-}
-body {
-	line-height: 1;
-}
-ol, ul {
-	list-style: none;
-}
-blockquote, q {
-	quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
-}
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
-}
-
-
-/*END OF RESET END OF RESET END OF RESET */
-
+/** { border: 1px solid red !important; }*/
 
 /*START BASE CSS HERE*/
 
@@ -55,76 +10,74 @@ body {
 
 p {
 	color: #c6c5c5;
-	/*color: red;*/
-/*	float: left;*/	
 	font-size: 17px
 	}
 
 h3 {
-  	font-family: Montserrat, Helvetica, Arial, sans-serif;
+  	font-family: 'Montserrat', Helvetica, Arial, sans-serif;
   	font-size: 18px;
   	color: rgba(244,145,33,1);
 }
 
 h4 {
   	font-size: 15px;
-/*  	font-weight: bold;
-*/  	color: rgba(255,255,255,1);
+	color: rgba(255,255,255,1);
 }
-
-/*fieldset {
-	padding-left: 80px;
-	margin-right: 40px;
-	padding-right: 60px;
-
-}*/
 
 /*END BASE CSS HERE*/
 
-
 /*CSS LAYOUT SPECIFICATIONS*/
-
 
 .container {
 	background-color: #bbbdbf;
 	width: 980px;
-	height: 1000px;
-	margin:auto;
+	margin: auto;
 	}
 
-header {
-	width: 100%;
-	height: 50px;
-	background: #686868; /* Old browsers */
-	background: -moz-linear-gradient(top,  #686868 0%, #0e0e0e 100%); /* FF3.6+ */
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#686868), 
-		color-stop(100%,#0e0e0e)); /* Chrome,Safari4+ */
-	background: -webkit-linear-gradient(top,  #686868 0%,#0e0e0e 100%); /* Chrome10+,Safari5.1+ */
-	background: -o-linear-gradient(top,  #686868 0%,#0e0e0e 100%); /* Opera 11.10+ */
-	background: -ms-linear-gradient(top,  #686868 0%,#0e0e0e 100%); /* IE10+ */
-	background: linear-gradient(to bottom,  #686868 0%,#0e0e0e 100%); /* W3C */
-	-webkit-box-shadow: 4px 3px 11px rgba(255, 255, 255, 0.25);
-	-moz-box-shadow:    4px 3px 11px rgba(255, 255, 255, 0.25);
-	box-shadow:         4px 3px 11px rgba(255, 255, 255, 0.25);
+
+/* begin HEADER area --------------------------------  */
+	
+	header {
+		width: 100%;
+		height: 50px;
+		background: #686868; /* Old browsers */
+		background: -moz-linear-gradient(top,  #686868 0%, #0e0e0e 100%); /* FF3.6+ */
+		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#686868), 
+			color-stop(100%,#0e0e0e)); /* Chrome,Safari4+ */
+		background: -webkit-linear-gradient(top,  #686868 0%,#0e0e0e 100%); /* Chrome10+,Safari5.1+ */
+		background: -o-linear-gradient(top,  #686868 0%,#0e0e0e 100%); /* Opera 11.10+ */
+		background: -ms-linear-gradient(top,  #686868 0%,#0e0e0e 100%); /* IE10+ */
+		background: linear-gradient(to bottom,  #686868 0%,#0e0e0e 100%); /* W3C */
+		-webkit-box-shadow: 4px 3px 11px rgba(255, 255, 255, 0.25);
+		-moz-box-shadow:    4px 3px 11px rgba(255, 255, 255, 0.25);
+		box-shadow:         4px 3px 11px rgba(255, 255, 255, 0.25);
+		float: left;
+		}
+
+	.rehash-logo {
+		float: left;
+		padding: 5px 0 0 20px;
+	}
+
+	header p {
+		float: left;
+		padding: 19px 0 0 130px;
+	}	
+
+	.log-out  {
+		float: right;
+		color: #fa8e11;
+		padding: 17px 25px 0 0;
+		text-decoration: none;
+	}
+		
+/* end HEADER area  --------------------------------  */	
+
+/* begin NEW RECORDING area  --------------------------------  */	
+
+.dashboard-container {
 	float: left;
-	}
-
-.rehash-logo {
-	float: left;
-	padding: 5px 0 0 20px;
-	}
-
-header p {
-	float: left;
-	padding: 19px 0 0 130px;
-}	
-
-.log-out  {
-	float: right;
-	color: #fa8e11;
-	padding: 17px 25px 0 0;
-	text-decoration: none;
-	}
+}
 
 .dashboard-container h1 {
 	color: #484848;
@@ -134,168 +87,123 @@ header p {
 	padding: 30px 0 40px 300px;
 	}
 
-.dashboard-left {
+
+/* NEW RECORDING FORM CONTAINER */
+/*was .dashboard-left */
+.new_recording {
 	float: left;
 	width: 620px;
 	margin: 0 0 0 18px;
+	padding: 0px 0px 20px 0px;
 	}
 
-.dashboard-left img {
-	/*twitter bird*/
-	float: left;
-	margin: 95px 0 0 18px;
-	}
-
-.dashboard-right {
-	float: right;
-	width: 265px;
-	margin-right: 20px;
-	}
-
-.streams, .recommended {
-	background: #484848;
-	border-radius: 10px;
+.datetime, .duration, .sessionname {
+	padding-left: 80px;
+	background-color: #181b14;
+	height: 150px;
 }
 
-.streams h3 {
-	padding: 11px 20px 8px 20px;
-}
-.streams h4 {
-	padding-left: 20px;
-	padding-top: 10px;
-	padding-bottom: 10px;
-	border-top: 1px solid #bbbdbf;	
-}
-
-.streams li {
-	color: #999999;
-	padding: 6px 0 6px 0;
-	margin: 0 20px;
-	border-top: 1px dotted rgba(255,255,255,.5);}
-
-.streams p {
-	/*display: inline;*/
-	text-align: right;
-	color: red;
-}
-	
-.streams li:last-child {
-	padding-bottom: 30px;
-}
-
-.indicator {
-	float: right;
-	padding: 8px 40px 0 0;
-}
-
-.recommended {
-	margin-top: 20px;
-	min-height: 100px;
-}
-
-.recommended h3 {
-	padding: 11px 20px 8px 20px;
-
-}
-
-.recommended li {
-	color: #999999;
-	padding: 6px 0 6px 0;
-	margin: 0 20px;
-	border-top: 1px dotted rgba(255,255,255,.5);}
-
-.recommended li:last-child {
-	padding-bottom: 30px;
-}	
-.sm-avatar {
-	float: left;
-	/*display: inline;*/
-	padding: 3px 0 0 20px;
-	margin-right: 10px;
-}
-
-.view-all {
-	border-top: 1px solid #bbbdbf;	
-}
-
-.view-all p {
-	text-align: right;
-  	color: rgba(244,145,33,1);
-	padding: 8px 20px 8px 0;
-
-}
-
-
-
-
+/* begin SPECIFY CRITERIA  */
 
 .specify {
 	background-color: #f3f3f4;
 	border-radius: 10px 10px 0 0;
 	color: #fa8e11;
-	float: left;
 	height: 169px;
 	line-height: 22px;
 	}
 
-.specify p {
+.specify img {
+	/*twitter bird*/
 	float: left;
+	margin: 95px 10px 0 18px;
+	}
+	
+.specify p {
 	padding: 20px 20px 22px 20px;
-	width: 460px;
   	color: rgba(244,145,33,1);
 	font-size: 18px;
 	line-height: 24px;
 	}
-		
+
 #specifyfield {
 	background: #fff;
 	border: solid 1px;
 	border-radius: 5px;
-	border-color: #999; /*Lightened color of border DDE*/
-	float: right;	
+	border-color: #999; /*Lightened color of border DDE very cool yn*/
 	font-size: 22px;
 	font-family: 'Helvetica Neue', helvetica, sans-serif;		
 	font-weight: lighter;
-	margin-right: 50px;
+	margin-right: 75px;
 	padding: 7px 7px 7px 9px;
-	width: 484px;
+	width: 455px;
 	}
+	/* START -fix so the placeholder text disappears upon focus DDE*/
+	.specify input:focus::-webkit-input-placeholder {
+	  color: transparent;
+	}
+	/* END -fix so the placeholder text disappears upon focus*/
 
-/* START -fix so the placeholder text disappears upon focus DDE*/
+/* end SPECIFY CRITERIA  */
 
-.specify input:focus::-webkit-input-placeholder {
-  color: transparent;
-}
-/* END -fix so the placeholder text disappears upon focus*/
-
+/* begin DATE TIME  */
 .datetime {
-	color: #fff;
-	background-color: #484848;
-	height: 167px;
-	float: left;
-	width: 620px;
-	}
 
-.datetime p:first-child {
-	padding: 40px 0 25px 0;
+}
+.datetime p {
+	padding-top: 15px;
 }
 
 .reset {
 	color: #fa8e11;
-	padding: 0 0 0 160px;
+	padding: 0 0 0 120px;
 }
 
-#timepicker {
-color: #fff;
-}
-
-.duration {
-	background-color: #343434;
-	height: 150px;	
-	width: 620px;
+.legend {
 	float: left;
+	color: #fff;
+	padding: 0 0 8px 0;
+	font-size: 14px;
+	width: 480px;
 }
 
+#date-legend {	
+}
+
+#time-legend {
+	padding-left: 200px;
+}
+
+#datepicker {
+	font-size:		14px;
+	padding: 		9px 9px 11px 9px;
+	width: 			180px;
+}
+#timepicker {
+	padding: 9px 9px 11px 9px;
+	font-size: 14px;
+	width: 80px;
+	margin-left:	28px;
+}
+
+#timepicker, #datepicker {
+color: #fff;
+background-color: #484848;
+border: none;
+border-radius: 5px;
+margin-right:
+}
+
+/* end DATE TIME  */
+
+/* begin DURATION  */
+.duration {
+
+}
+.duration p {
+	padding-top: 15px;
+}	
+/* begin DURATION RADIO */
 /* RADIO */
 
 .button-holder {
@@ -306,16 +214,13 @@ color: #fff;
 .button-holder p {
     width: 60px;
     height: 65px;
-    /*background-image: url('img/hr-03-off.png');*/
-    /*background-size: 33px 50px;*/
-
 }
 
 .regular-radio {
     display: none;
 }
 
-label p {
+.radio_label {
 	color: white;
 	font-size: 18px;
 	text-align: center;
@@ -325,10 +230,10 @@ label p {
 .regular-radio + label {
     -webkit-appearance: none;
     background-color: rgba(72,72,72,1);
-    /*border: 1px solid #cacece;*/
     border: 1px solid gray;
-    box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px -15px 10px -12px rgba(0,0,0,0.05);
-    /*padding: 9px;*/
+    box-shadow: 0 1px 2px rgba(0,0,0,0.05), 
+				inset 0px -15px 10px -12px rgba(0,0,0,0.05);
+    padding: 9px;
     border-radius: 12px;
     display: inline-block;
     position: relative;
@@ -341,9 +246,6 @@ label p {
     border-radius: 50px;
     position: absolute;
     top: 3px;
-    /*background: #99a1a7;*/
-    /*background: rgba(244,145,33,1);*/
-    /*box-shadow: inset 0px 0px 10px rgba(0,0,0,0.3);*/
     text-shadow: 0px;
     left: 3px;
     font-size: 32px;
@@ -351,9 +253,7 @@ label p {
  
 .regular-radio:checked + label {
     background-color: rgba(244,145,33,.8);
-    color: white;
     border: 1px solid #adb8c0;
-    /*box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px -15px 10px -12px rgba(0,0,0,0.05), inset 15px 10px -12px rgba(255,255,255,0.1), inset 0px 0px 10px rgba(0,0,0,0.1);*/
 }
  
 .regular-radio + label:active, .regular-radio:checked + label:active {
@@ -361,7 +261,7 @@ label p {
 }
  
 .big-radio + label {
-    /*padding: 16px;*/
+    padding: 16px;
 }
  
 .big-radio:checked + label:after {
@@ -371,93 +271,178 @@ label p {
     top: 35px;
 }
 
-.radio_label{
-  color: white;
-  font-size: 18px;
-	text-align: center;
-	padding-top: 20px;
-	padding-bottom: 50px;
-	width: 60px;
-}
-
-
 /* END OF RADIO */
 
+/* end DURATION RADIO */
+	
+
+/* end DURATION  */
 
 
-.sessionname {
-	color: #fff;
-	background-color: #1d1d1d;
-	height: 137px;
-	float: left;
-	width: 620px;
+
+
+
+
+/* begin SESSION NAME */
+
+.sessionname  {
+	color: #484848;
+	border-top: solid 2px #484848;
+	height: 120px;
 }
 
-.sessionname input {
-	margin: 20px 80px 0 20px ;
+.sessionname p {
+	padding-top: 15px;
+}	
+#setsessionname {
+	background-color: #ededed;
+	border: none;
+	border-radius: 5px;
+	color: #484848;
+	font-size: 20px;
+	margin: 20px 0 0 0px ;
+	padding: 10px;
+	width: 435px;
 }
 
-.submit {
-	color: #fff;
-	background-color: #333;
-	border-radius: 0 0 10px 10px;
-	height: 37px;
-	float: left;
-	width: 620px;
-}
 
-footer {
-	background-color: #fa8e11;
-	clear: both;
-	float: left;
-	height: 40px;
-	margin-top: 50px;
-	width: 980px;
+/* end SESSION NAME */
+
+
+/* begin SUBMIT BUTTON */
+	.submit {
+		color: #181b14;
+		background-color: #181b14;
+		border-radius: 0 0 10px 10px;
+		border-top: solid 2px #484848;
+		padding: 20px 0 55px 0;
 	}
 
-.footerlinks ul {
-	list-style: none;
-	margin: 0;
-}
+	.submit-btn {
+		font-size: 17px;
+		float: right;
+		text-decoration: none;
+		margin-right: 85px;
+		padding: 7px 22px;
+		border-radius: 7px;
+		color: #181b14;
+		background-color: #fa9a1b;
+		border: 1px solid #b37c1d;
+	}
+	.submit-btn:hover {
+		background-color: #f48708;
+	}
 
+	.submit-btn:active {
+		background-color: #bc6705;
+		position:relative;
+		top:1px;
 
-.footerlinks li {
-	float: left;
-	color: #fff;
+	}
 
-}
+/* end SUBMIT BUTTON */
 
-.footerlinks a {
-	color: red;
-	font-size: 30px;
-}
+/* end NEW RECORDING AREA --------------------------------  */
 
-.footerlinks a:hover {
-	color: pink;
-}
+/* begin RECORDINGS AREA --------------------------------  */
 
+		.streams, .recommended {
+			background: #484848;
+			border-radius: 10px;
+			float: right;
+			margin-right: 20px;
+			width: 300px;
+		}
 
+		.streams h3 {
+			padding: 11px 20px 8px 20px;
+		}
 
+		.streams h4 {
+			padding-left: 20px;
+			padding-top: 10px;
+			padding-bottom: 10px;
+			border-top: 1px solid #bbbdbf;	
+		}
 
+		.streams li {
+			color: #999999;
+			padding: 6px 0 6px 0;
+			margin: 0 20px;
+			border-top: 1px dotted rgba(255,255,255,.5);}
 
+		.streams p {
+			text-align: right;
+			color: red;
+		}
 
+		.streams li:last-child {
+			padding-bottom: 30px;
+		}
 
+		.indicator {
+			float: right;
+			padding: 8px 40px 0 0;
+		}
 
+		.recommended {
+			margin-right: 20px;
+			margin-top: 20px;
+			margin-bottom: 45px;
+			min-height: 100px;
+		}
 
+		.recommended h3 {
+			padding: 11px 20px 8px 20px;
 
+		}
 
+		.recommended li {
+			color: #999999;
+			padding: 6px 0 6px 0;
+			margin: 0 20px;
+			border-top: 1px dotted rgba(255,255,255,.5);}
 
+		.recommended li:last-child {
+			padding-bottom: 30px;
+		}	
+		.sm-avatar {
+			float: left;
+			padding: 3px 0 0 20px;
+			margin-right: 10px;
+		}
 
+		.view-all {
+			border-top: 1px solid #bbbdbf;	
+		}
 
+		.view-all p {
+			text-align: right;
+		  	color: rgba(244,145,33,1);
+			padding: 8px 20px 8px 0;
+		}
 
+/* end RECORDINGS AREA --------------------------------  */
 
+/* begin FOOTER area  --------------------------------  */	
 
+	footer {
+		background-color: #fa8e11;
+		clear: both;
+		height: 50px;
+		}
 
+	.navb ul li {
+		padding-left: 290px;
+		/*border-right: solid 1px #181b14;*/
+	}
 
+	.navb ul li a {
+		color: #181b14;
+		text-decoration: none;
+		font-family: 'Montserrat', Helvetica, Arial, sans-serif;
+		float: left;
+		padding: 16px 10px;
+	}
 
-
-
-
-
-
-
+/* end FOOTER area  --------------------------------  */	

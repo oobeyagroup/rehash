@@ -6,7 +6,7 @@ $(document).ready(function(){
 
 
 	$(function() {
-		$('#basicExample').timepicker();
+		$('#timepicker').timepicker();
 	});
 
 

@@ -238,7 +238,16 @@ input[type="checkbox"] {
 	padding: 6px 15px;
 	text-decoration: none;
 }
-#login_submit {
+
+/*heroku pre-compile threw an error in here some where:
+	   Running: rake assets:precompile
+       rake aborted!
+       Invalid CSS after "...rgba(0,0,0,0.4)": expected "{", was ";"
+       (in /tmp/build_2vfdn6tg4zahm/app/assets/stylesheets/application.css)
+but it looks like we don't use them
+*/
+
+/*#login_submit {
 	-webkit-box-shadow: 0 2px 3px rgba(0,0,0,0.4);
 	-moz-box-shadow: 0 2px 3px rgba(0,0,0,0.4);
 	-ms-box-shadow: 0 2px 3px rgba(0,0,0,0.4);
@@ -261,7 +270,7 @@ input[type="checkbox"] {
 	-ms-box-shadow: 1px 0px 2px 0px rgba(0,0,0,0.5);
 	-o-box-shadow: 1px 0px 2px 0px rgba(0,0,0,0.5);
 	box-shadow: 1px 0px 2px 0px rgba(0,0,0,0.5);
-}
+}*/
 
 
 /*Login Form End */

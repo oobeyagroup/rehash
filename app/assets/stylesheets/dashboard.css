@@ -2,447 +2,199 @@
 
 /*START BASE CSS HERE*/
 
-body {
-	background-color: rgb(105,106,108);
-	font-family: 'Helvetica Neue', helvetica, sans-serif;
-	font-weight: lighter;
-	}
+body { background-color: rgb(105,106,108); font-family: 'Helvetica Neue', helvetica,
+sans-serif; font-weight: lighter; }
 
-p {
-	color: #c6c5c5;
-	font-size: 17px
-	}
+p { color: #c6c5c5; font-size: 17px }
 
-h3 {
-  	font-family: 'Montserrat', Helvetica, Arial, sans-serif;
-  	font-size: 18px;
-  	color: rgba(244,145,33,1);
-}
+h3 { font-family: 'Montserrat', Helvetica, Arial, sans-serif; font-size: 18px; color:
+rgba(244,145,33,1); }
 
-h4 {
-  	font-size: 15px;
-	color: rgba(255,255,255,1);
-}
+h4 { font-size: 15px; color: rgba(255,255,255,1); }
 
 /*END BASE CSS HERE*/
 
 /*CSS LAYOUT SPECIFICATIONS*/
 
-.container {
-	background-color: #bbbdbf;
-	width: 980px;
-	margin: auto;
-	}
+.container { background-color: #bbbdbf; width: 980px; margin: auto; }
 
+/* begin HEADER area -------------------------------- */
 
-/* begin HEADER area --------------------------------  */
-	
-	header {
-		width: 100%;
-		height: 50px;
-		background: #686868; /* Old browsers */
-		background: -moz-linear-gradient(top,  #686868 0%, #0e0e0e 100%); /* FF3.6+ */
-		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#686868), 
-			color-stop(100%,#0e0e0e)); /* Chrome,Safari4+ */
-		background: -webkit-linear-gradient(top,  #686868 0%,#0e0e0e 100%); /* Chrome10+,Safari5.1+ */
-		background: -o-linear-gradient(top,  #686868 0%,#0e0e0e 100%); /* Opera 11.10+ */
-		background: -ms-linear-gradient(top,  #686868 0%,#0e0e0e 100%); /* IE10+ */
-		background: linear-gradient(to bottom,  #686868 0%,#0e0e0e 100%); /* W3C */
-		-webkit-box-shadow: 4px 3px 11px rgba(255, 255, 255, 0.25);
-		-moz-box-shadow:    4px 3px 11px rgba(255, 255, 255, 0.25);
-		box-shadow:         4px 3px 11px rgba(255, 255, 255, 0.25);
-		float: left;
-		}
+ header { width: 100%; height: 50px; background: #686868; /* Old browsers */ background:
+-moz-linear-gradient(top, #686868 0%, #0e0e0e 100%); /* FF3.6+ */ background:
+-webkit-gradient(linear, left top, left bottom, color-stop(0%,#686868),
+color-stop(100%,#0e0e0e)); /* Chrome,Safari4+ */ background: -webkit-linear-gradient(top,
+#686868 0%,#0e0e0e 100%); /* Chrome10+,Safari5.1+ */ background: -o-linear-gradient(top,
+#686868 0%,#0e0e0e 100%); /* Opera 11.10+ */ background: -ms-linear-gradient(top, #686868
+0%,#0e0e0e 100%); /* IE10+ */ background: linear-gradient(to bottom, #686868 0%,#0e0e0e 100%);
+/* W3C */ -webkit-box-shadow: 4px 3px 11px rgba(255, 255, 255, 0.25); -moz-box-shadow: 4px 3px
+11px rgba(255, 255, 255, 0.25); box-shadow: 4px 3px 11px rgba(255, 255, 255, 0.25); float:
+left; }
 
-	.rehash-logo {
-		float: left;
-		padding: 5px 0 0 20px;
-	}
+ .rehash-logo { float: left; padding: 5px 0 0 20px; }
 
-	header p {
-		float: left;
-		padding: 19px 0 0 130px;
-	}	
+ header p { float: left; padding: 19px 0 0 130px; }
 
-	.log-out  {
-		float: right;
-		color: #fa8e11;
-		padding: 17px 25px 0 0;
-		text-decoration: none;
-	}
-		
-/* end HEADER area  --------------------------------  */	
+ .log-out { float: right; color: #fa8e11; padding: 17px 25px 0 0; text-decoration: none; }
 
-/* begin NEW RECORDING area  --------------------------------  */	
+/* end HEADER area -------------------------------- */
 
-.dashboard-container {
-	float: left;
-}
+/* begin NEW RECORDING area -------------------------------- */
 
-.dashboard-container h1 {
-	color: #484848;
-	float: left;
-	font-size: 30px;
-	line-height: 37px;
-	padding: 30px 0 40px 300px;
-	}
+.dashboard-container { float: left; }
 
+.dashboard-container h1 { color: #484848; float: left; font-size: 30px; line-height: 37px;
+padding: 30px 0 40px 300px; }
 
-/* NEW RECORDING FORM CONTAINER */
-/*was .dashboard-left */
-.new_recording {
-	float: left;
-	width: 620px;
-	margin: 0 0 0 18px;
-	padding: 0px 0px 20px 0px;
-	}
+/* NEW RECORDING FORM CONTAINER */ /*was .dashboard-left */ .new_recording { float: left;
+width: 620px; margin: 0 0 0 18px; padding: 0px 0px 20px 0px; }
 
-.datetime, .duration, .sessionname {
-	padding-left: 80px;
-	background-color: #181b14;
-	height: 150px;
-}
+.datetime, .duration, .sessionname { padding-left: 80px; background-color: #181b14; height:
+150px; }
 
-/* begin SPECIFY CRITERIA  */
+/* begin SPECIFY CRITERIA */
 
-.specify {
-	background-color: #f3f3f4;
-	border-radius: 10px 10px 0 0;
-	color: #fa8e11;
-	height: 169px;
-	line-height: 22px;
-	}
+.specify { background-color: #f3f3f4; border-radius: 10px 10px 0 0; color: #fa8e11; height:
+169px; line-height: 22px; }
 
-.specify img {
-	/*twitter bird*/
-	float: left;
-	margin: 95px 10px 0 18px;
-	}
-	
-.specify p {
-	padding: 20px 20px 22px 20px;
-  	color: rgba(244,145,33,1);
-	font-size: 18px;
-	line-height: 24px;
-	}
+.specify img { /*twitter bird*/ float: left; margin: 95px 10px 0 18px; }
 
-#specifyfield {
-	background: #fff;
-	border: solid 1px;
-	border-radius: 5px;
-	border-color: #999; /*Lightened color of border DDE very cool yn*/
-	font-size: 22px;
-	font-family: 'Helvetica Neue', helvetica, sans-serif;		
-	font-weight: lighter;
-	margin-right: 75px;
-	padding: 7px 7px 7px 9px;
-	width: 455px;
-	}
-	/* START -fix so the placeholder text disappears upon focus DDE*/
-	.specify input:focus::-webkit-input-placeholder {
-	  color: transparent;
-	}
-	/* END -fix so the placeholder text disappears upon focus*/
+.specify p { padding: 20px 20px 22px 20px; color: rgba(244,145,33,1); font-size: 18px;
+line-height: 24px; }
 
-/* end SPECIFY CRITERIA  */
+#specifyfield { background: #fff; border: solid 1px; border-radius: 5px; border-color: #999;
+/*Lightened color of border DDE very cool yn*/ font-size: 22px; font-family: 'Helvetica Neue',
+helvetica, sans-serif; font-weight: lighter; margin-right: 75px; padding: 7px 7px 7px 9px;
+width: 455px; } /* START -fix so the placeholder text disappears upon focus DDE*/ .specify
+input:focus::-webkit-input-placeholder { color: transparent; } /* END -fix so the placeholder
+text disappears upon focus*/
 
-/* begin DATE TIME  */
-.datetime {
+/* end SPECIFY CRITERIA */
 
-}
-.datetime p {
-	padding-top: 15px;
-}
+/* begin DATE TIME */ .datetime {
 
-.reset {
-	color: #fa8e11;
-	padding: 0 0 0 120px;
-}
+} .datetime p { padding-top: 15px; }
 
-.legend {
-	float: left;
-	color: #fff;
-	padding: 0 0 8px 0;
-	font-size: 14px;
-	width: 480px;
-}
+.reset { color: #fa8e11; padding: 0 0 0 120px; }
 
-#date-legend {	
-}
+.legend { float: left; color: #fff; padding: 0 0 8px 0; font-size: 14px; width: 480px; }
 
-#time-legend {
-	padding-left: 200px;
-}
+#date-legend { }
 
-#datepicker {
-	font-size:		14px;
-	padding: 		9px 9px 11px 9px;
-	width: 			180px;
-}
+#time-legend { padding-left: 200px; }
+
+#datepicker { font-size: 14px; padding: 9px 9px 11px 9px; width: 180px; } 
 #timepicker {
-	padding: 9px 9px 11px 9px;
-	font-size: 14px;
-	width: 80px;
-	margin-left:	28px;
+padding: 9px 9px 11px 9px; font-size: 14px; width: 80px; margin-left: 28px; }
+
+#timepicker, #datepicker { color: #fff; background-color: #484848; border: none; border-radius:
+5px; }
+
+/* end DATE TIME */
+
+/* begin DURATION */ 
+.duration {} 
+.duration p { padding-top: 15px; } /* begin DURATION RADIO */ /* RADIO */
+
+.button-holder { background-color: none; padding: 20px 60px 20px 0px; }
+
+.button-holder p { width: 60px; height: 65px; }
+
+.regular-radio { display: none; }
+
+.radio_label { color: white; font-size: 18px; text-align: center; padding-top: 20px; }
+
+.regular-radio + label { -webkit-appearance: none; background-color: rgba(72,72,72,1); border:
+1px solid gray; box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px -15px 10px -12px
+rgba(0,0,0,0.05); padding: 9px; border-radius: 12px; display: inline-block; position: relative;
 }
 
-#timepicker, #datepicker {
-color: #fff;
-background-color: #484848;
-border: none;
-border-radius: 5px;
-margin-right:
-}
+.regular-radio:checked + label:after { content: ' '; width: 12px; height: 12px; border-radius:
+50px; position: absolute; top: 3px; text-shadow: 0px; left: 3px; font-size: 32px; }
 
-/* end DATE TIME  */
+.regular-radio:checked + label { background-color: rgba(244,145,33,.8); border: 1px solid
+#adb8c0; }
 
-/* begin DURATION  */
-.duration {
+.regular-radio + label:active, .regular-radio:checked + label:active { box-shadow: 0 1px 2px
+rgba(0,0,0,0.05), inset 0px 1px 3px rgba(0,0,0,0.1); }
 
-}
-.duration p {
-	padding-top: 15px;
-}	
-/* begin DURATION RADIO */
-/* RADIO */
+.big-radio + label { padding: 16px; }
 
-.button-holder {
-    background-color: none;
-    padding: 20px 60px 20px 0px;
-}
-
-.button-holder p {
-    width: 60px;
-    height: 65px;
-}
-
-.regular-radio {
-    display: none;
-}
-
-.radio_label {
-	color: white;
-	font-size: 18px;
-	text-align: center;
-	padding-top: 20px;
-}
-
-.regular-radio + label {
-    -webkit-appearance: none;
-    background-color: rgba(72,72,72,1);
-    border: 1px solid gray;
-    box-shadow: 0 1px 2px rgba(0,0,0,0.05), 
-				inset 0px -15px 10px -12px rgba(0,0,0,0.05);
-    padding: 9px;
-    border-radius: 12px;
-    display: inline-block;
-    position: relative;
-}
- 
-.regular-radio:checked + label:after {
-    content: ' ';
-    width: 12px;
-    height: 12px;
-    border-radius: 50px;
-    position: absolute;
-    top: 3px;
-    text-shadow: 0px;
-    left: 3px;
-    font-size: 32px;
-}
- 
-.regular-radio:checked + label {
-    background-color: rgba(244,145,33,.8);
-    border: 1px solid #adb8c0;
-}
- 
-.regular-radio + label:active, .regular-radio:checked + label:active {
-    box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px 1px 3px rgba(0,0,0,0.1);
-}
- 
-.big-radio + label {
-    padding: 16px;
-}
- 
-.big-radio:checked + label:after {
-    width: 24px;
-    height: 24px;
-    left: 24px;
-    top: 35px;
-}
+.big-radio:checked + label:after { width: 24px; height: 24px; left: 24px; top: 35px; }
 
 /* END OF RADIO */
 
 /* end DURATION RADIO */
-	
 
-/* end DURATION  */
-
-
-
-
-
+/* end DURATION */
 
 /* begin SESSION NAME */
 
-.sessionname  {
-	color: #484848;
-	border-top: solid 2px #484848;
-	height: 120px;
-}
+.sessionname { color: #484848; border-top: solid 2px #484848; height: 120px; }
 
-.sessionname p {
-	padding-top: 15px;
-}	
-#setsessionname {
-	background-color: #ededed;
-	border: none;
-	border-radius: 5px;
-	color: #484848;
-	font-size: 20px;
-	margin: 20px 0 0 0px ;
-	padding: 10px;
-	width: 435px;
-}
-
+.sessionname p { padding-top: 15px; } 
+#setsessionname { background-color: #ededed; border:
+none; border-radius: 5px; color: #484848; font-size: 20px; margin: 20px 0 0 0px ; padding:
+10px; width: 435px; }
 
 /* end SESSION NAME */
 
+/* begin SUBMIT BUTTON */ .submit { color: #181b14; background-color: #181b14; border-radius: 0
+0 10px 10px; border-top: solid 2px #484848; padding: 20px 0 55px 0; }
 
-/* begin SUBMIT BUTTON */
-	.submit {
-		color: #181b14;
-		background-color: #181b14;
-		border-radius: 0 0 10px 10px;
-		border-top: solid 2px #484848;
-		padding: 20px 0 55px 0;
-	}
+ .submit-btn { font-size: 17px; float: right; text-decoration: none; margin-right: 85px;
+padding: 7px 22px; border-radius: 7px; color: #181b14; background-color: #fa9a1b; border: 1px
+solid #b37c1d; } 
+.submit-btn:hover { background-color: #f48708; }
 
-	.submit-btn {
-		font-size: 17px;
-		float: right;
-		text-decoration: none;
-		margin-right: 85px;
-		padding: 7px 22px;
-		border-radius: 7px;
-		color: #181b14;
-		background-color: #fa9a1b;
-		border: 1px solid #b37c1d;
-	}
-	.submit-btn:hover {
-		background-color: #f48708;
-	}
-
-	.submit-btn:active {
-		background-color: #bc6705;
-		position:relative;
-		top:1px;
-
-	}
+ .submit-btn:active { background-color: #bc6705; position:relative; top:1px; }
 
 /* end SUBMIT BUTTON */
 
-/* end NEW RECORDING AREA --------------------------------  */
+/* end NEW RECORDING AREA -------------------------------- */
 
-/* begin RECORDINGS AREA --------------------------------  */
+/* begin RECORDINGS AREA -------------------------------- */
 
-		.streams, .recommended {
-			background: #484848;
-			border-radius: 10px;
-			float: right;
-			margin-right: 20px;
-			width: 300px;
-		}
+ .streams, .recommended { background: #484848; border-radius: 10px; float: right; margin-right:
+20px; width: 300px; }
 
-		.streams h3 {
-			padding: 11px 20px 8px 20px;
-		}
+ .streams h3 { padding: 11px 20px 8px 20px; }
 
-		.streams h4 {
-			padding-left: 20px;
-			padding-top: 10px;
-			padding-bottom: 10px;
-			border-top: 1px solid #bbbdbf;	
-		}
+ .streams h4 { padding-left: 20px; padding-top: 10px; padding-bottom: 10px; border-top: 1px
+solid #bbbdbf; }
 
-		.streams li {
-			color: #999999;
-			padding: 6px 0 6px 0;
-			margin: 0 20px;
-			border-top: 1px dotted rgba(255,255,255,.5);}
+ .streams li { color: #999999; padding: 6px 0 6px 0; margin: 0 20px; border-top: 1px dotted
+rgba(255,255,255,.5); }
 
-		.streams p {
-			text-align: right;
-			color: red;
-		}
+ .streams p { text-align: right; color: red; }
 
-		.streams li:last-child {
-			padding-bottom: 30px;
-		}
+ .streams li:last-child { padding-bottom: 30px; }
 
-		.indicator {
-			float: right;
-			padding: 8px 40px 0 0;
-		}
+ .indicator { float: right; padding: 8px 40px 0 0; }
 
-		.recommended {
-			margin-right: 20px;
-			margin-top: 20px;
-			margin-bottom: 45px;
-			min-height: 100px;
-		}
+ .recommended { margin-right: 20px; margin-top: 20px; margin-bottom: 45px; min-height: 100px; }
 
-		.recommended h3 {
-			padding: 11px 20px 8px 20px;
+ .recommended h3 { padding: 11px 20px 8px 20px;}
 
-		}
+ .recommended li { color: #999999; padding: 6px 0 6px 0; margin: 0 20px; border-top: 1px dotted
+rgba(255,255,255,.5);}
 
-		.recommended li {
-			color: #999999;
-			padding: 6px 0 6px 0;
-			margin: 0 20px;
-			border-top: 1px dotted rgba(255,255,255,.5);}
+ .recommended li:last-child { padding-bottom: 30px; } 
+.sm-avatar { float: left; padding: 3px 0 0 20px; margin-right: 10px; }
 
-		.recommended li:last-child {
-			padding-bottom: 30px;
-		}	
-		.sm-avatar {
-			float: left;
-			padding: 3px 0 0 20px;
-			margin-right: 10px;
-		}
+ .view-all { border-top: 1px solid #bbbdbf; }
 
-		.view-all {
-			border-top: 1px solid #bbbdbf;	
-		}
+ .view-all p { text-align: right; color: rgba(244,145,33,1); padding: 8px 20px 8px 0; }
 
-		.view-all p {
-			text-align: right;
-		  	color: rgba(244,145,33,1);
-			padding: 8px 20px 8px 0;
-		}
+/* end RECORDINGS AREA -------------------------------- */
 
-/* end RECORDINGS AREA --------------------------------  */
+/* begin FOOTER area -------------------------------- */
 
-/* begin FOOTER area  --------------------------------  */	
+ footer { background-color: #fa8e11; clear: both; height: 50px; }
 
-	footer {
-		background-color: #fa8e11;
-		clear: both;
-		height: 50px;
-		}
+ .navb ul li { padding-left: 290px; /*border-right: solid 1px #181b14;*/ }
 
-	.navb ul li {
-		padding-left: 290px;
-		/*border-right: solid 1px #181b14;*/
-	}
+ .navb ul li a { color: #181b14; text-decoration: none; font-family: 'Montserrat', Helvetica,
+Arial, sans-serif; float: left; padding: 16px 10px; }
 
-	.navb ul li a {
-		color: #181b14;
-		text-decoration: none;
-		font-family: 'Montserrat', Helvetica, Arial, sans-serif;
-		float: left;
-		padding: 16px 10px;
-	}
-
-/* end FOOTER area  --------------------------------  */	
+/* end FOOTER area -------------------------------- */

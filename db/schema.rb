@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121214113654) do
+ActiveRecord::Schema.define(:version => 20121214162906) do
 
   create_table "recordings", :force => true do |t|
     t.string   "name"
@@ -24,6 +24,7 @@ ActiveRecord::Schema.define(:version => 20121214113654) do
     t.string   "date_text"
     t.string   "time_text"
     t.integer  "user_id"
+    t.datetime "end_time"
   end
 
   create_table "tweets", :force => true do |t|

@@ -3,39 +3,33 @@
 
 		<h3>Recordings</h3>
 
-<!-- For now, randomly display whether there is a current recording or not -->
-		<% if (rand(2) == 1) %>  
-
+		<% if @my_current_recordings.count > 0 %>
 			<%= image_tag "on.gif", :class => "indicator" %><h4>Current</h4>
-			<ul class="stream-text" >
-				<li>Dec-04-2012_02:00p</li><!-- <p>Stop</p> -->
-				<li>Dec-04-2012_ArtBasel</li><!-- <p>Stop</p> -->
-			</ul>
-		
-		<% else %>
-
+		<% else %>	
 			<%= image_tag "off.gif", :class => "indicator" %><h4>Current</h4>
-			<ul class="stream-text" >
-				<li>No active recordings</li>
-			</ul>
-		
 		<% end %>
-
+		<ul>
+			<% @my_current_recordings.each do |recording| %>
+				<li title="Duration: <%= recording.duration.to_s %> Hours, Criteria:<%= recording.criteria %>"><%= recording.name + " on " + recording.start.strftime("%d-%b") + " at " + recording.start.strftime("%I:%M%p") %> </li>
+			<% end %>	
+		</ul>
+		
        	<h4>Scheduled</h4>
 		<ul>
-			<% @my_recordings.each do |recording| %>
+			<% @my_scheduled_recordings.each do |recording| %>
 				<li title="Duration: <%= recording.duration.to_s %> Hours, Criteria:<%= recording.criteria %>"><%= recording.name + " on " + recording.start.strftime("%d-%b") + " at " + recording.start.strftime("%I:%M%p") %> </li>
 			<% end %>	
 		</ul>
         <h4>Saved</h4>
-        <ul>
-			<li>Nov-30-2012_02:22p @DianClark</li>
-			<li>#Obama #Flotus</li>
-        </ul>	
+		<ul>
+			<% @my_saved_recordings.each do |recording| %>
+				<li title="Duration: <%= recording.duration.to_s %> Hours, Criteria:<%= recording.criteria %>"><%= recording.name + " on " + recording.start.strftime("%d-%b") + " at " + recording.start.strftime("%I:%M%p") %> </li>
+			<% end %>	
+		</ul>
 
-		<div class="view-all">
+		<!-- <div class="view-all">
 			<p>View All</p>
-		</div> 
+		</div>  -->
 	</div>
 
 	<div class="recommended">
@@ -46,3 +40,4 @@
 		</ul>
 	</div>
 </aside>
+

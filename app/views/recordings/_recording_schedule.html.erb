@@ -23,8 +23,8 @@
 
        	<h4>Scheduled</h4>
 		<ul>
-			<% @recordings.each do |recording| %>
-				<li title="Duration: <%= recording.duration.to_s %> Hours, Criteria:<%= recording.criteria %>"><%= recording.name %>  </li>
+			<% @my_recordings.each do |recording| %>
+				<li title="Duration: <%= recording.duration.to_s %> Hours, Criteria:<%= recording.criteria %>"><%= recording.name + " on " + recording.start.strftime("%d-%b") + " at " + recording.start.strftime("%I:%M%p") %> </li>
 			<% end %>	
 		</ul>
         <h4>Saved</h4>

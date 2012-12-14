@@ -16,7 +16,7 @@
 		<header>
 			<%= link_to image_tag("logo-small.png"), "#", :class => "rehash-logo" %>
 			<% if session[:user_id] %>
-			<p><%= User.find_by_id(session[:user_id]).name %> --- @<%= User.find_by_id(session[:user_id]).nickname %></p>
+			<p><%= image_tag User.find_by_id(session[:user_id]).twitter_profile_image, :class => "twitter_profile_image" %>  <%= User.find_by_id(session[:user_id]).name %> --- @<%= User.find_by_id(session[:user_id]).nickname %></p>
 			<% end %>
 			<%= link_to "Log out", signout_path,  :class => "log-out" %>
 		</header>

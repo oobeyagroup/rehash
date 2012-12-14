@@ -1,5 +1,5 @@
 class User < ActiveRecord::Base
-  attr_accessible :name, :provider, :uid, :nickname, :token, :secret
+  attr_accessible :name, :provider, :uid, :nickname, :token, :secret, :twitter_profile_image
 
   has_many :recordings
   
@@ -12,6 +12,7 @@ class User < ActiveRecord::Base
   		user.provider = auth["provider"]
   		user.uid = auth["uid"]
   		user.name = auth["info"]["name"]
+  		user.twitter_profile_image = auth["info"]["image"]
   		user.nickname = auth["info"]["nickname"]
   		user.token = auth["credentials"]["token"]
   		user.secret = auth["credentials"]["secret"]

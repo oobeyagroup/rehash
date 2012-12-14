@@ -1,3 +1,5 @@
+require 'date'
+
 class RecordingsController < ApplicationController
   
   def login
@@ -12,7 +14,13 @@ class RecordingsController < ApplicationController
   def dashboard
     @recordings = Recording.all
     @recording = Recording.new
+    
+    @recording.start = Time.now()
+    @recording.date_text = Time.now().strftime("%m/%d/%Y")
+    @recording.time_text = Time.now().strftime("%I:%M%p")
 
+    
+    
     respond_to do |format|
       format.html 
     end
@@ -21,6 +29,9 @@ class RecordingsController < ApplicationController
   def create
     @recording = Recording.new(params[:recording])
 
+    dt_text = @recording.date_text + " " + @recording.time_text
+    @recording.start = Date.strptime(dt_text, '%m/%d/%Y %I:%M%p')
+    
     respond_to do |format|
       if @recording.save
         format.html { redirect_to '/dashboard', notice: 'Recording was successfully created.' }

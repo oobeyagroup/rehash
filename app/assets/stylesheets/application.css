@@ -10,7 +10,9 @@
  *
  *= require_self
  *= require reset
+ *= jquery.timepicker.css
  *= require login
  *= require dashboard
+ *= 
 
  */

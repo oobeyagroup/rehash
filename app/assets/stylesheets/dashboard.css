@@ -81,11 +81,15 @@ text disappears upon focus*/
 
 #date-legend { }
 
-#time-legend { padding-left: 200px; }
+#time-legend { padding-left: 100px; }
 
-#datepicker { font-size: 14px; padding: 9px 9px 11px 9px; width: 180px; } 
+#datepicker { font-size: 14px; padding: 9px 9px 11px 9px; width: 100px; height: 16px; } 
 #timepicker {
 padding: 9px 9px 11px 9px; font-size: 14px; width: 80px; margin-left: 28px; }
+
+#recording_time_text {
+padding: 9px 9px 11px 9px; font-size: 14px; width: 100px !important; height: 35px; margin-left: 28px; 	color: #fff; background-color: #484848; border: none; border-radius:
+	5px;  text-align: center;  }
 
 #timepicker, #datepicker { color: #fff; background-color: #484848; border: none; border-radius:
 5px; }

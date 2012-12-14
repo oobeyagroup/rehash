@@ -40,3 +40,5 @@ gem 'bcrypt-ruby', '~> 3.0.0'
 gem 'omniauth-twitter'
 
 gem 'tweetstream'
+
+gem 'jquery-timepicker-rails'
